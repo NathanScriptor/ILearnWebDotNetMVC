@@ -1,2 +1,3 @@
 # ILearnWebDotNetMVC
-![Gitea Last Commit](https://img.shields.io/gitea/last-commit/NathanScriptor/ILearnWebDotNetMVC)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/NathanScriptor/ILearnWebDotNetMVC)
+
