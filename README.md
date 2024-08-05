@@ -1,3 +1,3 @@
 # ILearnWebDotNetMVC
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/NathanScriptor/ILearnWebDotNetMVC)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/d/NathanScriptor/ILearnWebDotNetMVC)
 
