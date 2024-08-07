@@ -21,6 +21,10 @@
 	<ProjectReference Include="..\ILearnWebApp.Application\ILearnWebApp.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\videos\" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
