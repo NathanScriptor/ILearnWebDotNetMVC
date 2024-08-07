@@ -1,11 +1,6 @@
-﻿using ILearnWebApp.Core.Interfaces.IRepositories;
+﻿using ILearnWebApp.Domain.Interfaces.IRepositories;
+using ILearnWebApp.Domain.Entities;
 using ILearnWebApp.Infrastructure.Data;
-using ILearnWebApp.Web.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ILearnWebApp.Infrastructure.Repositories
 {

@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILearnWebApp.Domain", "ILea
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILearnWebApp.Infrastructure", "ILearnWebApp.Infrastructure\ILearnWebApp.Infrastructure.csproj", "{70D7C709-F71B-465E-8E53-CD6A6A77BD72}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILearnWebApp.WebApp", "ILearnWebApp.Web\ILearnWebApp.WebApp.csproj", "{7A295657-B569-4D39-B44D-6D3306299EFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILearnWebApp.Web", "ILearnWebApp.Web\ILearnWebApp.Web.csproj", "{7A295657-B569-4D39-B44D-6D3306299EFF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILearnWebApp.Application", "ILearnWebApp.Application\ILearnWebApp.Application.csproj", "{A62E099C-1CCF-4E66-89BD-D453410F52D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{7A295657-B569-4D39-B44D-6D3306299EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A295657-B569-4D39-B44D-6D3306299EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A295657-B569-4D39-B44D-6D3306299EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A62E099C-1CCF-4E66-89BD-D453410F52D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A62E099C-1CCF-4E66-89BD-D453410F52D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A62E099C-1CCF-4E66-89BD-D453410F52D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A62E099C-1CCF-4E66-89BD-D453410F52D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ILearnWebApp.Web.Models
+namespace ILearnWebApp.Domain.Entities
 {
     public abstract class BaseEntity
     {

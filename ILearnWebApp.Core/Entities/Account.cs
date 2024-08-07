@@ -1,13 +1,14 @@
-﻿using ILearnWebApp.Core.Entities;
+﻿using Microsoft.AspNetCore.Identity;
 
-namespace ILearnWebApp.Web.Models
+namespace ILearnWebApp.Domain.Entities
 {
-    public class Account : BaseEntity
+    // Add profile data for application Accounts by adding properties to the Account class
+    public class Account : IdentityUser
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
         public string Role { get; set; }
+        public string Image {  get; set; } 
         public virtual ICollection<Lecturer> Lecturers { get; set; } = new List<Lecturer>();
         public virtual ICollection<Student> Students { get; set; } = new List<Student>();
     }
 }
+

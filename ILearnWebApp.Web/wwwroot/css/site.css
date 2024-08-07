@@ -1,5 +1,52 @@
-html {
-  font-size: 14px;
+body, html
+{
+    font-size: 14px;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+:root
+{
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #ff4c4c;
+    --secondary: #e71d36;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --theme-color: #e40000;
+    --primary-color: #3f3d56;
+    --primary-light: #fcf1e7;
+    --primary-dark: #ffc945;
+    --secondary-color: #f50057;
+    --font-color: #6b6768;
+    --bg-color: #fff;
+    --heading-color: #060606;
+    --footer-color: #060e1f;
+    --footer-cpy-color: #040a17;
+    --border-radius: 30px;
+    --border-radius-full: 15px;
+    --border-color: transparent;
+    --border-color-light: #eee;
+    --iframe-filter: grayscale(0%);
+    --bg-grey: #f4f4f4;
+    --bg-light: #fbfbfb;
+    --bg-dark-color: #fff;
+    --video-wrapper: 380px;
 }
 
 @media (min-width: 768px) {
@@ -12,11 +59,74 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+img
+{
+    max-width: 100%;
+    /*height: auto !important;*/
 }
 
-body {
-  margin-bottom: 60px;
+#loading-overlay
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
 }
+
+.loader
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+.minimal-border-nav
+{
+    border: 2px solid black;
+}
+
+.minimal-box
+{
+    margin: 20px;
+}
+
+header
+{
+    transition: all 0.4s ease 0s;
+    height: 90px;
+    display: grid;
+    align-items: center;
+}
+
+.navbar-brand
+{
+    width: 100px;
+    margin-right: 10px;
+    font-size: 32px;
+    display: inline-block;
+}
+
+.logo-title
+{
+    font-family: 'Beautiful', sans-serif;
+}
+
+
+
+
+
+
+
+
+

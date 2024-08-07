@@ -1,11 +1,6 @@
-﻿using ILearnWebApp.Web.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.InteropServices;
 
-namespace ILearnWebApp.Core.Entities
+namespace ILearnWebApp.Domain.Entities
 {
     public class Discount : BaseEntity
     {
@@ -13,5 +8,7 @@ namespace ILearnWebApp.Core.Entities
         public DateTime FromDate { get; set; }
         public DateTime ToDate { get; set; }
         public bool Status { get; set; }
+        public string CourseId { get; set; }
+        public virtual Course Course { get; set; }
     }
 }
