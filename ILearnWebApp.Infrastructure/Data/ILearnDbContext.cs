@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace ILearnWebApp.Infrastructure.Data
 {
-    public class ILearnDbContext : IdentityDbContext<Account>
+    public class ILearnDbContext : DbContext
     {
         public ILearnDbContext() { }
 
