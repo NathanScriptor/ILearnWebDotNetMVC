@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\Course\" />
     <Folder Include="DTOs\Lecturer\" />
     <Folder Include="DTOs\Video\" />
     <Folder Include="DTOs\Student\" />

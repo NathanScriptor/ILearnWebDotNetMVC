@@ -3,6 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using ILearnWebApp.Domain.Entities;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using ILearnWebApp.Domain.Interfaces.UnitOfWork;
+using ILearnWebApp.Infrastructure.Repositories.UnitOfWork;
+using ILearnWebApp.Application.IServices;
+using ILearnWebApp.Application.Services;
+using ILearnWebApp.Application.Mapper;
 
 internal class Program
 {
@@ -30,14 +35,16 @@ internal class Program
             options.SlidingExpiration = true;
         });
 
-        builder.Services.ConfigureApplicationCookie(options =>
-        {
-            options.Cookie.HttpOnly = true;
-            options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
-            options.LoginPath = "/Views/Auth/Login";
-            //options.AccessDeniedPath = "/Identity/Account/AccessDenied";
-            options.SlidingExpiration = true;
-        });
+        builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+        builder.Services.AddScoped<IAccountService, AccountService>();
+        builder.Services.AddScoped<ICourseRegistrationService, CourseRegistrationService>();
+        builder.Services.AddScoped<ICourseService, CourseService>();
+        builder.Services.AddScoped<IDiscountService, DiscountService>();
+        builder.Services.AddScoped<ILecturerService, LecturerService>();
+        builder.Services.AddScoped<IStudentService, StudentService>();
+        builder.Services.AddScoped<IVideoService, VideoService>();
+
+        builder.Services.AddAutoMapper(typeof(CourseProfile).Assembly);
 
         var app = builder.Build();
 

@@ -1,4 +1,4 @@
-﻿@model List<ILearnWebApp.Domain.Entities.Course>
+﻿@model List<ILearnWebApp.Domain.DTOs.Course.GetCourseModel>
 @using ILearnWebApp.Domain.Entities
 
 @{
@@ -71,9 +71,9 @@
             </div>
             <div class="row justify-content-center">
                 @{
-                    foreach (Course j in Model)
+                    foreach (var j in Model)
                     {
-                        if (j.CategoryId == 1)
+                        if (j.Category.CategoryName == "Khoá học nền tảng")
                         {
                             <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 mt-3 mb-3">
                                 <div class="course-item pb-2">
@@ -131,52 +131,52 @@
             </div>
             <div class="row justify-content-center">
                 @{
-                    foreach (Course j in Model)
+                    foreach (var j in Model)
                     {
-                        if (@j.CategoryId == 2)
+                        if (@j.Category.CategoryName == "Cẩm nang luyện thi cấp tốc")
                         {
-                                        <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 mt-3 mb-3">
-                                            <div class="course-item pb-2">
-                                                <a href="@Url.Action("GetCourse","Cart",new {ID = j.Id})">
-                                                    <div class="course-item-image">
-                                                        <img src="~/images/resources/@j.Img" alt="" class="minimal-border-bottom" />
-                                                    </div>
-                                                </a>
-                                                <div class="course-item-detail">
-                                                    <h3 class="title" style="min-height: unset">
-                                                        <a href="@Url.Action("GetCourse","Cart",new {ID = j.Id})">
-                                                            <span class="ellipsis-2 course-name ml-3 mt-3" style="height: 42px">@j.CourseName</span>
-                                                        </a>
-                                                    </h3>
-                                                </div>
-                                                <div class="row pb-2">
-                                                    <div class="col-md-6 col-sm-12 col-7 pr-0">
-                                                        <div class="ellipsis-1 ml-3 mb-2">
-                                                            <span>
-                                                    @Common.GetLecturerNameFromCourse(j)
-                                                            </span>
-                                                        </div>
-                                                        <div class="rating_course rate_star_replace pull-left star_change ml-3">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-fw fa-star"></i>
-                                                            <i class="fa fa-fw fa-star"></i>
-                                                            <i class="fa fa-fw fa-star"></i>
-                                                            <i class="fa fa-fw fa-star"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="clearfix text-right">
-                                                            <div class="price-col mr-1">
-                                                                <strike><span id="formatted-price">@String.Format("{0: #,##0đ}", j.CoursePrice)</span></strike>
-                                                                <br>
-                                                                <strong style="font-size: 22px"><span id="formatted-price">@String.Format("{0: #,##0đ}", j.DiscountPrice)</span></strong>
-                                                                <br>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 mt-3 mb-3">
+                                <div class="course-item pb-2">
+                                    <a href="@Url.Action("GetCourse","Cart",new {ID = j.Id})">
+                                        <div class="course-item-image">
+                                            <img src="~/images/resources/@j.Img" alt="" class="minimal-border-bottom" />
+                                        </div>
+                                    </a>
+                                    <div class="course-item-detail">
+                                        <h3 class="title" style="min-height: unset">
+                                            <a href="@Url.Action("GetCourse","Cart",new {ID = j.Id})">
+                                                <span class="ellipsis-2 course-name ml-3 mt-3" style="height: 42px">@j.CourseName</span>
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="row pb-2">
+                                        <div class="col-md-6 col-sm-12 col-7 pr-0">
+                                            <div class="ellipsis-1 ml-3 mb-2">
+                                                <span>
+                                        @Common.GetLecturerNameFromCourse(j)
+                                                </span>
+                                            </div>
+                                            <div class="rating_course rate_star_replace pull-left star_change ml-3">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="clearfix text-right">
+                                                <div class="price-col mr-1">
+                                                    <strike><span id="formatted-price">@String.Format("{0: #,##0đ}", j.CoursePrice)</span></strike>
+                                                    <br>
+                                                    <strong style="font-size: 22px"><span id="formatted-price">@String.Format("{0: #,##0đ}", j.DiscountPrice)</span></strong>
+                                                    <br>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
                         }
                     }
                 }
